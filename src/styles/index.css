@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F1E6EC;
+  color: #2E4246;
+}
+
+.navbar {
+  background-color: #2E4246;
+  color: #F1E6EC;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container-fluid {
+  background-color: #2E4246;
+  color: #F1E6EC;
+}
+
+.navbar-brand {
+  color: #F1E6EC;
+  font-size: 2.5rem;
+  font-family: 'Brush Script MT', cursive;
+  margin-left: 1.5rem;
+}
+
+button.navbar-toggler {
+  background-color: #F1E6EC;
+  margin-right: 1.5rem;
+}
+
+.offcanvas-body {
+  background-color: #2E4246;
+  color: #F1E6EC;
+}
+
+.offcanvas-header {
+  padding: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  margin: 0px;
+}
+
+.offcanvas-title {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.0rem;
+  margin-left: 0.3rem;
+}
+
+.nav-link {
+  color: #F1E6EC;
+}
+
+.nav-link:hover {
+  color: #21ADC5; 
+}
+
+.nav-item {
+  font-size: 1.5rem;
+}
