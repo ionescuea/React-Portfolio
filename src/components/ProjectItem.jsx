@@ -1,27 +1,21 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/index.css";
 
 function ProjectItem(props) {
-  const [currentPage, setCurrentPage] = useState('Home');
-
-  const handlePageChange = (page) => {
-    props.handlePageChange(page);
-    setCurrentPage(page);
-  };
-
   return (
-    <div>
-      <a href={props.project_url} target='_blank'>{props.title}</a>
-      <img src={props.image_url} alt="" />
+    <div className="pg-card d-flex flex-row mt-3" style={{ width: "20rem" }}>
+      <div className="row">
+        <p className="card-title h5 text-center">{props.title}</p>
+        <p className="text-center">{props.tech}</p>
+        <hr></hr>
+        <a href={props.project_url} className="card-link" target='_blank'>
+          <img src={props.image_url} className="card-img-top m-0" alt={props.title} /></a>
+        <div className="card-body p-0 col-sm-12 col-lg-6">
+          <div className="card-text">{props.description}</div>
+        </div>
+      </div>
     </div>
   );
 }
-
-ProjectItem.propTypes = {
-  currentPage: PropTypes.string.isRequired,
-  handlePageChange: PropTypes.func.isRequired,
-};
 
 export default ProjectItem;

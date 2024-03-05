@@ -98,6 +98,25 @@ button.navbar-toggler {
   color: var(--color2);
 }
 
+/* Project Gallery */
+.pg-card {
+  background-color: var(--color1);
+  color: var(--color2);
+  border: 1px solid var(--color3);
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  height: 23rem;}
+
+.pg-card:hover {
+  background-color: var(--color3);
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
 /* Footer */
 .footer {
   position: fixed;
