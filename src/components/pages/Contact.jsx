@@ -1,22 +1,63 @@
-import React from 'react';
+import { useState } from 'react';
+import Modal from 'react-modal';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "../../styles/index.css";
 
-const Contact = () => (
-  <div>
-    <h1>Contact Page</h1>
-    <p>
-      Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-      molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-      magna a ultrices. Aenean pellentesque placerat lacus imperdiet efficitur.
-      In felis nisl, luctus non ante euismod, tincidunt bibendum mi. In a
-      molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna posuere,
-      eget tristique dui dapibus. Maecenas fermentum elementum faucibus. Quisque
-      nec metus vestibulum, egestas massa eu, sollicitudin ipsum. Nulla
-      facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh dictum
-      ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia
-      nostra, per inceptos himenaeos. Etiam ornare rutrum felis at rhoncus.
-      Etiam vel condimentum magna, quis tempor nulla.
-    </p>
-  </div>
-);
+function ContactFormModal() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [formData, setFormData] = useState({ email: '', message: '' });
 
-export default Contact;
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Send the email using the form data
+    window.location.href = `mailto:${formData.email}?subject=Portfolio Inquiry&body=${formData.message}`;
+    setModalIsOpen(false); 
+  };
+
+  return (
+    <div className="container">
+      <div className="row align-items-center justify-content-center h-100">
+        <div className="col-4">
+          <div className="h1 mb-3 pb-3 pt-5 text-center">
+            Get in touch
+          </div>
+          <div className="intro card mt-5 mb-5 shadow-lg p-3 rounded fw-semibold bg-light text-center">
+            If you have any questions, please feel free to contact me. I&apos;d love to hear from you!
+            <div className="d-flex justify-content-center align-items-center h-100 mt-3">
+              <button className="btn btn-primary" onClick={() => setModalIsOpen(true)}>Open Contact Form</button>
+              <div className="row ">
+                <Modal
+                  isOpen={modalIsOpen}
+                  onRequestClose={() => setModalIsOpen(false)}
+                  contentLabel="Contact Form Modal"
+                  className="custom-modal shadow w-50 p-3 rounded" tabindex="-1" 
+                  overlayClassName="custom-overlay overlay" 
+                >
+                  <div className="container">
+                    <div className="row justify-content-center">
+                      <div className="col-md-6"></div>
+                        <form className="p-3 rounded bg-light shadow w-100" onSubmit={handleSubmit}>
+                          <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control" placeholder="Your email" required />
+                          <textarea name="message" value={formData.message} onChange={handleChange} className="form-control" placeholder="Your message" required />
+                          <button type="submit" className="btn btn-primary mt-2">Send Email</button>
+                        </form>
+                    </div>
+                  </div>
+                  <div className="modal-footer">
+                    <button className="btn btn-secondary mt-2" onClick={() => setModalIsOpen(false)}>Close</button>
+                  </div>
+                </Modal>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+      export default ContactFormModal;
