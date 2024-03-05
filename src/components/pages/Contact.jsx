@@ -26,7 +26,7 @@ function ContactFormModal() {
             Get in touch
           </div>
           <div className="intro card mt-5 mb-5 shadow-lg p-3 rounded fw-semibold bg-light text-center">
-            If you have any questions, please feel free to contact me. I&apos;d love to hear from you!
+          What&apos;s holding you back? Send me a message!
             <div className="d-flex justify-content-center align-items-center h-100 mt-3">
               <button className="btn btn-primary" onClick={() => setModalIsOpen(true)}>Open Contact Form</button>
               <div className="row ">
@@ -42,7 +42,7 @@ function ContactFormModal() {
                       <div className="col-md-6"></div>
                         <form className="p-3 rounded bg-light shadow w-100" onSubmit={handleSubmit}>
                           <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control" placeholder="Your email" required />
-                          <textarea name="message" value={formData.message} onChange={handleChange} className="form-control" placeholder="Your message" required />
+                          <textarea name="message" value={formData.message} onChange={handleChange} className="form-control mt-2" placeholder="Your message" required />
                           <button type="submit" className="btn btn-primary mt-2">Send Email</button>
                         </form>
                     </div>

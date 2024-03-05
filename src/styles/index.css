@@ -101,6 +101,7 @@ button.navbar-toggler {
 /* Footer */
 .footer {
   position: fixed;
+  margin: 0;
   left: 0;
   bottom: 0;
   width: 100%;
