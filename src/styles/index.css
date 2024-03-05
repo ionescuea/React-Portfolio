@@ -72,7 +72,6 @@ button.navbar-toggler {
 }
 
 /* Contact */
-
 .modal-body {
   align-items:end;
   display: flex;
@@ -96,5 +95,15 @@ button.navbar-toggler {
 
 .btn:hover {
   background-color: var(--color3);
+  color: var(--color2);
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color1);
   color: var(--color2);
 }

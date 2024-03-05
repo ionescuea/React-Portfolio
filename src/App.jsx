@@ -5,4 +5,4 @@ function App() {
   return <PortfolioContainer />;
 }
 
-export default App
+export default App;
