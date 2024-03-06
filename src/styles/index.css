@@ -117,6 +117,10 @@ p {
   padding: 0px;
 }
 
+.card-text {
+  margin-left: 10px;
+}
+
 /* Footer */
 .footer {
   position: fixed;
