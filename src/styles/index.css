@@ -15,6 +15,11 @@ body {
   color:var(--color1);
 }
 
+/* Navbar */
+h5 {
+  color: var(--color1);
+}
+
 .navbar {
   background-color: var(--color1);
   color: var(--color2);
@@ -112,6 +117,10 @@ button.navbar-toggler {
   background-color: var(--color3);
 }
 
+card-link {
+  color: var(--color3);
+}
+
 p {
   margin: 0px;
   padding: 0px;
@@ -119,6 +128,10 @@ p {
 
 .card-text {
   margin-left: 10px;
+}
+
+.continued {
+  color: var(--color3);
 }
 
 /* Footer */

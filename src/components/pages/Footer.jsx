@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiGithub } from "react-icons/fi";
 import { PiLinkedinLogo } from "react-icons/pi";
 import { MdAlternateEmail } from "react-icons/md";

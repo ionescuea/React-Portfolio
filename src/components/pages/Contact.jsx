@@ -21,7 +21,7 @@ function ContactFormModal() {
   return (
     <div className="container">
       <div className="row align-items-center justify-content-center h-100">
-        <div className="col-4">
+        <div className="col-12 col-md-6">
           <div className="h1 mb-3 pb-3 pt-5 text-center">
             Get in touch
           </div>
