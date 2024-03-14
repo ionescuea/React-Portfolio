@@ -8,7 +8,7 @@ This is an initial scaffolding of Alexandra's portfolio, created using React.
 
 ## Instalation
 
-The website page can be accessed here [Netlify]().
+The website page can be accessed here [Netlify](https://alexandra-ionescu-portfolio.netlify.app/).
 
 ## Usage
 
