@@ -45,7 +45,7 @@ const Home = () => (
       </div>
 
       <div className="col-4 col-sm-12 col-md-4">
-        <img src="src/assets/alex-photo.jpg" alt="Alex's picture" className="img-fluid rounded-5 d-block img-thumbnail p-0"></img>
+        <img src="alex-photo.jpg" alt="Alex's picture" className="img-fluid rounded-5 d-block img-thumbnail p-0"></img>
       </div>
 
       <div className="col-4 col-sm-12 col-md-4 mt-5">
