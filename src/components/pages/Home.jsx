@@ -17,7 +17,9 @@ const Home = () => (
           Hello and welcome to my portfolio!
         </div>
         <div className="intro card mt-5 shadow-lg p-3 rounded fw-semibold bg-light">
-          Hi, I&apos;m Alexandra. I&apos;m a front-end developer based in Plymouth, UK. I have
+          Hi, I&apos;m Alexandra.
+          <br />
+          I&apos;m a front-end developer based in Plymouth, UK. I have
           experience in HTML, CSS, JavaScript and React. I&apos;m passionate about creating
           beautiful and performant websites. I&apos;m always looking for new challenges
           and opportunities to learn. If you&apos;re interested in working with me, please
