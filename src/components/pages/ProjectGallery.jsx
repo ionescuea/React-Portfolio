@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '/src/styles/index.css';
 import ProjectItem from '../ProjectItem';
 
 const ProjectGallery = () => (

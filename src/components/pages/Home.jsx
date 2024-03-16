@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../../styles/index.css";
 import { ImHtmlFive } from "react-icons/im";
 import { IoLogoCss3 } from "react-icons/io";
 import { RiBootstrapFill } from "react-icons/ri";

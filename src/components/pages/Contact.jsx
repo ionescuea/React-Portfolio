@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../../styles/index.css";
 
 function ContactFormModal() {
   const [modalIsOpen, setModalIsOpen] = useState(false);

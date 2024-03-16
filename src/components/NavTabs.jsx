@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../styles/index.css";
 
 function NavTabs(props) {
   const [currentPage, setCurrentPage] = useState('Home');
