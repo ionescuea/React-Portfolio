@@ -2,6 +2,7 @@
   --color1: #2E4246;
   --color2: #F1E6EC;
   --color3: #21ADC5;
+  --color4: #12cebb;
 }
 
 body {
@@ -74,6 +75,10 @@ button.navbar-toggler {
 
 .nav-item {
   font-size: 1.5rem;
+}
+
+.active {
+  color: var(--color4);
 }
 
 /* Contact */
