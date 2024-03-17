@@ -2,7 +2,6 @@
   --color1: #2E4246;
   --color2: #F1E6EC;
   --color3: #21ADC5;
-  --color4: #12cebb;
 }
 
 body {
@@ -78,7 +77,7 @@ button.navbar-toggler {
 }
 
 .active {
-  color: var(--color4);
+  color: var(--color3);
 }
 
 /* Contact */

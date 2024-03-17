@@ -11,18 +11,15 @@ import { ImGithub } from "react-icons/im";
 const Home = () => (
   <div className="container">
     <div className="row align-items-center justify-content-center h-100 mt-5 pt-5">
-      <div className="col-4">
+      <div className="col-lg-4 col-sm-12">
         <div className="h1 text-center">
           Hello and welcome to my portfolio!
         </div>
         <div className="intro card mt-5 shadow-lg p-3 rounded fw-semibold bg-light">
-          Hi, I&apos;m Alexandra.
-          <br />
-          I&apos;m a front-end developer based in Plymouth, UK. I have
-          experience in HTML, CSS, JavaScript and React. I&apos;m passionate about creating
-          beautiful and performant websites. I&apos;m always looking for new challenges
-          and opportunities to learn. If you&apos;re interested in working with me, please
-          get in touch. I&apos;d love to hear from you!
+          Hi, my name is Alexandra. I specialize in front-end development, with expertise in HTML, CSS, JavaScript,
+          and React. My passion lies in crafting visually stunning and high-performance websites.
+          I actively seek out new challenges and opportunities for growth. If you are interested
+          in collaborating, please reach out. I am eager to connect with you!
         </div>
           <div className="h5 mt-3 pt-3 pb-1 text-center">
             Frontend Technologies used
@@ -43,11 +40,11 @@ const Home = () => (
           </div>
       </div>
 
-      <div className="col-4 col-sm-12 col-md-4">
+      <div className="col-lg-4 col-sm-12 mt-5">
         <img src="alex-photo.jpg" alt="Alex's picture" className="img-fluid rounded-5 d-block img-thumbnail p-0"></img>
       </div>
 
-      <div className="col-4 col-sm-12 col-md-4 mt-5">
+      <div className="col-lg-4 col-sm-12 mt-5">
         <div className="col-3 card shadow rounded w-100 mb-5">
           <div className="card-body">
             <div className="quotes fst-italic">

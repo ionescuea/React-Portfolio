@@ -33,12 +33,12 @@ function ContactFormModal() {
                   isOpen={modalIsOpen}
                   onRequestClose={() => setModalIsOpen(false)}
                   contentLabel="Contact Form Modal"
-                  className="custom-modal shadow w-50 p-3 rounded" tabindex="-1" 
+                  className="custom-modal shadow w-100 rounded" tabindex="-1" 
                   overlayClassName="custom-overlay overlay" 
                 >
                   <div className="container">
                     <div className="row justify-content-center">
-                      <div className="col-md-6"></div>
+                      <div className="col-sm-6 col-md-8"></div>
                         <form className="p-3 rounded bg-light shadow w-100" onSubmit={handleSubmit}>
                           <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control" placeholder="Your email" required />
                           <textarea name="message" value={formData.message} onChange={handleChange} className="form-control mt-2" placeholder="Your message" required />
