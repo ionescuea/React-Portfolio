@@ -44,8 +44,8 @@ function ContactFormModal() {
                           <textarea name="message" value={formData.message} onChange={handleChange} className="form-control mt-2" placeholder="Your message" required />
                           <button type="submit" className="btn btn-primary mt-2">Send Email</button>
                         </form> */}
-                      <form name="contact" method="POST" data-netlify="true">
-                      <input type="hidden" name="form-name" value="portfolioContact" />
+                      <form name="contact" method="POST">
+                      <input type="hidden" name="form-name" value="contact" />
                         <p>
                           <label>Email <input type="email" name="email" placeholder="Your email" /></label>
                         </p>
