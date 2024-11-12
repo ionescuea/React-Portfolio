@@ -14,7 +14,7 @@ function ContactFormModal() {
     e.preventDefault();
     // Send the email using the form data
     window.location.href = `mailto:${formData.email}?subject=Portfolio Inquiry&body=${formData.message}`;
-    setModalIsOpen(false); 
+    setModalIsOpen(false);
   };
 
   return (
@@ -25,7 +25,7 @@ function ContactFormModal() {
             Get in touch
           </div>
           <div className="intro card mt-5 mb-5 shadow-lg p-3 rounded fw-semibold bg-light text-center">
-          What&apos;s holding you back? Send me a message!
+            What&apos;s holding you back? Send me a message!
             <div className="d-flex justify-content-center align-items-center h-100 mt-3">
               <button className="btn btn-primary" onClick={() => setModalIsOpen(true)}>Open Contact Form</button>
               <div className="row ">
@@ -33,17 +33,28 @@ function ContactFormModal() {
                   isOpen={modalIsOpen}
                   onRequestClose={() => setModalIsOpen(false)}
                   contentLabel="Contact Form Modal"
-                  className="custom-modal shadow w-100 rounded" tabindex="-1" 
-                  overlayClassName="custom-overlay overlay" 
+                  className="custom-modal shadow w-100 rounded" tabindex="-1"
+                  overlayClassName="custom-overlay overlay"
                 >
                   <div className="container">
                     <div className="row justify-content-center">
                       <div className="col-sm-6 col-md-8"></div>
-                        <form className="p-3 rounded bg-light shadow w-100" onSubmit={handleSubmit}>
+                      {/* <form className="p-3 rounded bg-light shadow w-100" onSubmit={handleSubmit}>
                           <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control" placeholder="Your email" required />
                           <textarea name="message" value={formData.message} onChange={handleChange} className="form-control mt-2" placeholder="Your message" required />
                           <button type="submit" className="btn btn-primary mt-2">Send Email</button>
-                        </form>
+                        </form> */}
+                      <form name="contact" method="POST" data-netlify="true">
+                        <p>
+                          <label>Email <input type="email" name="email" /></label>
+                        </p>
+                        <p>
+                          <label>Message <textarea name="message" rows="5" ></textarea></label>
+                        </p>
+                        <p>
+                          <button type="submit">Send</button>
+                        </p>
+                      </form>
                     </div>
                   </div>
                   <div className="modal-footer">
@@ -59,4 +70,4 @@ function ContactFormModal() {
   );
 }
 
-      export default ContactFormModal;
+export default ContactFormModal;
