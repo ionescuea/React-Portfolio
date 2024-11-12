@@ -10,7 +10,7 @@ import { ImGithub } from "react-icons/im";
 
 const Home = () => (
   <div className="container">
-    <div className="row align-items-center justify-content-center h-100 mt-5 pt-5">
+    <div className="row align-items-center justify-content-center h-100">
       <div className="col-lg-4 col-sm-12">
         <div className="h1 text-center">
           Hello and welcome to my portfolio!
@@ -40,8 +40,8 @@ const Home = () => (
           </div>
       </div>
 
-      <div className="col-lg-4 col-sm-12 mt-5">
-        <img src="alex-photo.jpg" alt="Alex's picture" className="img-fluid rounded-5 d-block img-thumbnail p-0"></img>
+      <div className="col-lg-4 col-sm-12 mt-3">
+        <img src="alex-photo.jpg" alt="Alex's picture" className="img-fluid rounded-5 d-block img-thumbnail"></img>
       </div>
 
       <div className="col-lg-4 col-sm-12 mt-5">
