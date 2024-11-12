@@ -6,16 +6,16 @@ function ContactFormModal() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [formData, setFormData] = useState({ email: '', message: '' });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // const handleChange = (e) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Send the email using the form data
-    window.location.href = `mailto:${formData.email}?subject=Portfolio Inquiry&body=${formData.message}`;
-    setModalIsOpen(false);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Send the email using the form data
+  //   window.location.href = `mailto:${formData.email}?subject=Portfolio Inquiry&body=${formData.message}`;
+  //   setModalIsOpen(false);
+  // };
 
   return (
     <div className="container">
@@ -45,11 +45,12 @@ function ContactFormModal() {
                           <button type="submit" className="btn btn-primary mt-2">Send Email</button>
                         </form> */}
                       <form name="contact" method="POST" data-netlify="true">
+                      <input type="hidden" name="form-name" value="portfolioContact" />
                         <p>
-                          <label>Email <input type="email" name="email" /></label>
+                          <label>Email <input type="email" name="email" placeholder="Your email" /></label>
                         </p>
                         <p>
-                          <label>Message <textarea name="message" rows="5" ></textarea></label>
+                          <label>Message <textarea name="message" rows="5" placeholder="Your message"></textarea></label>
                         </p>
                         <p>
                           <button type="submit">Send</button>
