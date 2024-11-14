@@ -1,17 +1,15 @@
-import { FiGithub } from "react-icons/fi";
-import { PiLinkedinLogo } from "react-icons/pi";
-import { MdAlternateEmail } from "react-icons/md";
-import { FiFileText } from "react-icons/fi";
-
+import { Icon } from "@iconify/react/dist/iconify.js";
 const Footer = () => {
   return (
     <div className="container">
         <footer className="footer row">
-          <ul className="col nav-link list-unstyled d-flex justify-content-around mt-2 m-0">
-              <li><a href="https://github.com/ionescuea" className="btn btn-outline-primary" target='_blank'><FiGithub /></a></li>
-              <li><a href="mailto:ionescuea@yahoo.com" className="btn btn-outline-primary" target='_blank'><MdAlternateEmail /></a></li>
-              <li><a href="resume.pdf" className="btn btn-outline-primary" target='_blank'><FiFileText /></a></li>
-              <li><a href="https://www.linkedin.com/in/alexandra-e-ionescu/" className="btn btn-outline-primary" target='_blank'><PiLinkedinLogo /></a></li>
+          <ul className="col nav-link list-unstyled d-flex justify-content-evenly mt-2 m-0">
+              <li><a href="https://github.com/ionescuea" className="btn btn-outline-primary" target='_blank'>
+              <Icon icon="mdi:github" /></a></li>
+              <li><a href="resume.pdf" className="btn btn-outline-primary" target='_blank'>
+              <Icon icon="mdi:resume" /></a></li>
+              <li><a href="https://www.linkedin.com/in/alexandra-e-ionescu/" className="btn btn-outline-primary" target='_blank'>
+              <Icon icon="mdi:linkedin" /></a></li>
           </ul>
         </footer>
     </div>
