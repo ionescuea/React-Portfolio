@@ -13,6 +13,64 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color2);
   color:var(--color1);
+  overflow-x: hidden;
+}
+
+.greetings {
+  color: var(--color1);
+  font-family: 'Brush Script MT', cursive;
+  font-size: 4rem;
+  animation: slide-right 3s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 764px) {
+  .greetings {
+    font-size: 3.5rem;
+    animation: slide-right 2s ease-in-out;
+  }
+  .h2 {
+    font-size: 1.8rem;
+    padding-top: 5px;
+  }
+  .h5 {
+    font-size: 1rem;
+  }
+  .icon {
+    display: none;
+  }
+}
+
+.icon {
+  display: inline-block;
+}
+
+.photos img {
+  animation: slide-in 2s ease-in-out;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.intro-card {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Navbar */
@@ -28,7 +86,7 @@ h5 {
   padding: 0px;
 }
 
-.container-fluid {
+.navTab {
   background-color: var(--color1);
   color: var(--color2);
 }
@@ -86,6 +144,7 @@ button.navbar-toggler {
   display: flex;
   justify-content: center;
 }
+
 .custom-modal {
   background-color: var(--color1);
   color: var(--color1);
@@ -121,8 +180,13 @@ button.navbar-toggler {
   background-color: var(--color3);
 }
 
-card-link {
-  color: var(--color3);
+.card-link {
+  color: var(--color2);
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: var(--color1);
 }
 
 p {
