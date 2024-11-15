@@ -19,6 +19,7 @@ body {
 .greetings {
   color: var(--color1);
   font-family: 'Brush Script MT', cursive;
+  font-weight: bold;
   font-size: 4rem;
   animation: slide-right 3s ease-in-out;
   position: absolute;
@@ -30,7 +31,7 @@ body {
 
 @media screen and (max-width: 764px) {
   .greetings {
-    font-size: 3.5rem;
+    font-size: 3rem;
     animation: slide-right 2s ease-in-out;
   }
   .h2 {
@@ -141,12 +142,6 @@ button.navbar-toggler {
 }
 
 /* Contact */
-.modal-body {
-  align-items:end;
-  display: flex;
-  justify-content: center;
-}
-
 .custom-modal {
   background-color: var(--color1);
   color: var(--color1);
