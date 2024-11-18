@@ -10,17 +10,18 @@ function ProjectItem(props) {
         <div className="col-md-8">
           <div className="card-body">
             <h5 className="card-title d-flex justify-content-center">{props.title}</h5>
+            {props.status === 'work-in-progress' && <small className="text-muted-status d-flex justify-content-center">- work in progress -</small>}
             <p className="card-text ml-2 p-2 fst-italic d-flex justify-content-center mt-3">{props.description}</p>
             <p className="card-text d-flex justify-content-center mt-3">
               <small className="text-muted">Built with: {props.tech}</small>
             </p>
             <div className="d-flex justify-content-center mt-3">
-            <a href={props.project_url} className="card-link" target="_blank">
-              Visit Project
-            </a>
-            <a href={props.github_url} className="card-link" target="_blank">
-              GitHub repo
-            </a>
+              <a href={props.project_url} className="card-link" target="_blank">
+                Visit Project
+              </a>
+              <a href={props.github_url} className="card-link" target="_blank">
+                GitHub repo
+              </a>
             </div>
           </div>
         </div>
@@ -30,28 +31,3 @@ function ProjectItem(props) {
 }
 
 export default ProjectItem;
-
-
-
-
-
-
-// function ProjectItem(props) {
-//   return (
-//     <div className="pg-card d-flex flex-row pb-2 mt-5" style={{ width: "20rem" }}>
-//       <div className="row">
-//         <p className="card-title h5 text-center">{props.title}</p>
-//         <p className="text-center">{props.tech}</p>
-//         <hr></hr>
-//         <a href={props.project_url} className="card-link" target='_blank'>
-//           <img src={props.image_url} className="card-img-top m-0" alt={props.title} /></a>
-//         <div className="card-body p-0 col-sm-12 col-lg-6">
-//           <div className="card-text fst-italic text-left">{props.description}</div>
-//         </div>
-//         <a href={props.github_url} className="card-link" target='_blank'>GitHub repo</a>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default ProjectItem;
