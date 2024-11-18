@@ -37,8 +37,6 @@ As the Navbar, the Footer is displayed on all pages. The Footer also contain lin
 
 ## Credits
 
-[BootcampSpot](https://github.com/edx)
-
 [Alexandra Ionescu](https://github.com/ionescuea)
 
 ## License
