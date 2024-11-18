@@ -35,22 +35,22 @@ function NavTabs(props) {
               </li>
               <li className="nav-item">
                 <a
-                  href="#Contact"
-                  onClick={() => handlePageChange('Contact')}
-                  className={`nav-link ${props.currentPage === 'Contact' ? 'active' : ''}`}
-                  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                >
-                  Contact
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
                   href="#ProjectGallery"
                   onClick={() => handlePageChange('Project Gallery')}
                   className={`nav-link ${props.currentPage === 'Project Gallery' ? 'active' : ''}`}
                   data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 >
                   Project Gallery
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  href="#Contact"
+                  onClick={() => handlePageChange('Contact')}
+                  className={`nav-link ${props.currentPage === 'Contact' ? 'active' : ''}`}
+                  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                >
+                  Contact
                 </a>
               </li>
             </ul>
