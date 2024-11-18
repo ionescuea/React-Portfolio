@@ -29,70 +29,6 @@ body {
   margin-right: 0px;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 764px) {
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .img-fluid {
-    height: 100%;
-    object-fit: contain;
-    align-self: center;;
-  }
-}
-
-@media screen and (max-width: 764px) {
-  .greetings {
-    font-size: 3rem;
-    animation: slide-right 2s ease-in-out;
-  }
-  .h2 {
-    font-size: 1.8rem;
-    padding-top: 5px;
-  }
-  .h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0px;
-    padding-bottom: 8px !important;
-  }
-  .icon {
-    display: none;
-  }
-  .intro-card {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-  }
-  .photos {
-    max-width: 400px;
-    margin: 0 auto;
-    padding-top: 0 !important;
-  }
-  .img {
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .img-fluid {
-    align-self: center;
-  }
-  .card-link:hover {
-    color: var(--color3);
-  }
-  .card-link:active {
-    color: var(--color1);
-  }
-}
-
 .icon {
   display: inline-block;
 }
@@ -101,6 +37,7 @@ body {
   animation-name: flipInY;
   animation-duration: 5s;
 }
+
 @keyframes flipInY {
   0% {
       transform: perspective(400px) rotateY(90deg);
@@ -147,6 +84,10 @@ h5 {
   font-size: 2.5rem;
   font-family: 'Brush Script MT', cursive;
   margin-left: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: var(--color3);
 }
 
 button.navbar-toggler {
@@ -246,4 +187,80 @@ ul {
   width: 100%;
   background-color: var(--color1);
   color: var(--color2);
+}
+
+/* Media queries */
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-fluid {
+    height: 100%;
+    object-fit: contain;
+    align-self: center;;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .greetings {
+    font-size: 3rem;
+    animation: slide-right 2s ease-in-out;
+  }
+  .h2 {
+    font-size: 1.8rem;
+    padding-top: 5px;
+  }
+  .h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+    padding-bottom: 8px !important;
+  }
+  .icon {
+    display: none;
+  }
+  .intro-card {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .photos {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 0 !important;
+  }
+  .img {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-fluid {
+    align-self: center;
+  }
+  .card-link:hover {
+    color: var(--color3);
+  }
+  .card-link:active {
+    color: var(--color1);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navbar-toggler {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .navbar-toggler-icon {
+    position: relative;
+  }
 }
