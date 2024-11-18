@@ -18,7 +18,7 @@ const Home = () => (
           Specializing in front-end development with skills in HTML, CSS, JavaScript, and React, my focus is on crafting clean, responsive websites that work seamlessly across all devices. Building user-friendly and visually appealing interfaces is a priority, with a dedication to code that's both efficient and maintainable.
           Always open to learning new tools and approaches, especially in fast-evolving front-end development, I'm excited to take on projects that offer growth and challenge. Feel free to explore the projects featured here, and don't hesitate to reach out for potential collaborations!
         </div>
-        <div className="h5 text-center py-3">
+        <div className="h3 text-center py-3">
           Frontend Technologies used
         </div>
         <div className="intro-card justify-content-center shadow rounded fw-semibold bg-light p-3 m-3">
@@ -61,7 +61,7 @@ const Home = () => (
           src="portfolio-photos.jpg"
           alt="Alex's pictures"
           style={{ maxWidth: '400px' }}
-          className="img img-fluid rounded-5 d-block img-thumbnail mx-auto"
+          className="img img-fluid image-style animation-flipInY rounded-5 d-block img-thumbnail mx-auto"
         />
       </div>
     </div>
