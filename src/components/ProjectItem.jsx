@@ -10,7 +10,7 @@ function ProjectItem(props) {
         <div className="col-md-8">
           <div className="card-body">
             <h5 className="card-title d-flex justify-content-center">{props.title}</h5>
-            {props.status === 'work-in-progress' && <small className="text-muted-status d-flex justify-content-center">- work in progress -</small>}
+            {/* {props.status === 'work-in-progress' && <small className="text-muted-status d-flex justify-content-center">- work in progress -</small>} */}
             <p className="card-text ml-2 p-2 fst-italic d-flex justify-content-center mt-3">{props.description}</p>
             <p className="card-text d-flex justify-content-center mt-3">
               <small className="text-muted">Built with: {props.tech}</small>
