@@ -14,14 +14,14 @@ const Home = () => (
         <div className="h2 text-center">
           Welcome to my portfolio!
         </div>
-        <div className="intro-card justify-content-center shadow rounded fw-semibold bg-light p-3 m-3">
+        <div className="intro-card justify-content-center shadow-lg rounded-5 fw-semibold bg-light p-3 m-3">
           Specializing in front-end development with skills in HTML, CSS, JavaScript, and React, my focus is on crafting clean, responsive websites that work seamlessly across all devices. Building user-friendly and visually appealing interfaces is a priority, with a dedication to code that's both efficient and maintainable.
           Always open to learning new tools and approaches, especially in fast-evolving front-end development, I'm excited to take on projects that offer growth and challenge. Feel free to explore the projects featured here, and don't hesitate to reach out for potential collaborations!
         </div>
         <div className="h3 text-center py-3">
           Frontend Technologies used
         </div>
-        <div className="intro-card justify-content-center shadow rounded fw-semibold bg-light p-3 m-3">
+        <div className="intro-card justify-content-center shadow-lg rounded-5 fw-semibold bg-light p-3 m-3">
           <div className="d-flex text-center justify-content-around align-items-center pt-2 pb-2">
             <div>
               <Icon icon="logos:html-5" width="24" height="24" />
@@ -57,11 +57,15 @@ const Home = () => (
         </div>
       </div>
       <div className="photos col-lg-5 col-sm-12 d-flex flex-column justify-content-center py-3 my-3 p-3">
-        <img
-          src="portfolio-photos.jpg"
+        <video
+          src="video-design.mp4"
           alt="Alex's pictures"
           style={{ maxWidth: '400px' }}
-          className="img img-fluid image-style animation-flipInY rounded-5 d-block img-thumbnail mx-auto"
+          className="img img-fluid image-style animation-flipInY rounded-5 d-block img-thumbnail mx-auto shadow-lg"
+          controls
+          autoPlay
+          loop
+          muted
         />
       </div>
     </div>

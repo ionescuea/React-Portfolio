@@ -12,7 +12,7 @@ function ContactFormModal() {
           <div className="h1 text-center" style= {{ fontFamily: 'Brush Script MT, cursive', fontSize: '4rem', fontWeight: 'bold', paddingBottom: '20px'}}>
             Get in touch
           </div>
-          <div className="intro-modal-card shadow rounded fw-bold bg-light text-center my-5 py-3 px-5" style={{ marginTop: '40px' }}>
+          <div className="intro-modal-card shadow-lg rounded-5 fw-bold bg-light text-center my-5 py-3 px-5" style={{ marginTop: '40px' }}>
             What&apos;s holding you back? Send me a message!
             <div className="d-flex justify-content-center align-items-center py-3">
               <button className="btn btn-primary col-sm-12 col-lg-6 mt-3" onClick={() => setModalIsOpen(true)}>Open Contact Form</button>
@@ -21,7 +21,7 @@ function ContactFormModal() {
                   isOpen={modalIsOpen}
                   onRequestClose={() => setModalIsOpen(false)}
                   contentLabel="Contact Form Modal"
-                  className="custom-modal shadow container-fluid col-sm-12 col-lg-6 rounded" tabindex="-1"
+                  className="custom-modal shadow-lg container-fluid col-sm-12 col-lg-6 rounded-5" tabindex="-1"
                   overlayClassName="custom-overlay overlay"
                 >
                   <div className="container">

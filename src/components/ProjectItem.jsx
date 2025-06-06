@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ProjectItem(props) {
   return (
-    <div className="card mb-5 shadow border-1 rounded fw-semibold bg-light p-2 m-1 mx-auto" style={{ maxWidth: "1000px" }}>
+    <div className="card mb-5 shadow-lg border-1 rounded-5 fw-semibold bg-light p-2 m-1 mx-auto" style={{ maxWidth: "1000px" }}>
       <div className="row g-0">
         <div className="col-md-4">
           <img src={props.image_url} className="img-fluid rounded" alt={props.title} />

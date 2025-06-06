@@ -1,10 +1,8 @@
-# React Portfolio
-
-Alexandra Ionescu's Portfolio using React
+# Alexandra Ionescu Portfolio
 
 ## Description
 
-This is an initial scaffolding of Alexandra's portfolio, created using React.
+Alexandra Ionescu's Portfolio using React.
 
 ## Instalation
 
