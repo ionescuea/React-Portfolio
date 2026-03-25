@@ -13,7 +13,8 @@ function NavTabs(props) {
   return (
     <nav className="navbar bg-body-tertiary fixed-top">
       <div className="navTab container-fluid">
-        <a className="navbar-brand" href="#Home" onClick={() => handlePageChange('Home')}>ionescuEA</a>
+        <a className="navbar-brand" href="#Home" onClick={() => handlePageChange('Home')}>Alexandra Ionescu <br />
+          <p className="title">Front-End Developer | Digital & Technical Support</p></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
