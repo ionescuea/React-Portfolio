@@ -90,6 +90,7 @@ h6 {
   width: 80%;
   margin: 0 auto;
   padding: 20px;
+  transition: padding 0.25s ease;
 }
 
 .home-page-layout {
@@ -98,11 +99,23 @@ h6 {
   align-items: center;
   padding-top: 50px;
   padding-bottom: 88px;
+  transition: padding 0.25s ease;
 }
 
 .home-page-row {
   width: 100%;
   align-items: center;
+}
+
+.photos {
+  transition: max-width 0.25s ease, padding 0.25s ease;
+}
+
+.home-media {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  transition: width 0.25s ease, max-width 0.25s ease;
 }
 
 /* Navbar */
@@ -121,23 +134,25 @@ h5 {
 .navTab {
   background-color: var(--color1);
   color: var(--color2);
+  position: relative;
 }
 
 .navbar-brand {
   color: var(--color2);
-  font-size: 2rem;
-  margin-left: 1.5rem;
+  font-size: clamp(1.2rem, 2.8vw, 2rem);
+  margin-left: clamp(0.5rem, 1.6vw, 1.5rem);
 }
 
 .navbar-brand p {
-  font-size: 1.5rem;
+  font-size: clamp(0.75rem, 1.5vw, 1.5rem);
   margin: 0;
   padding: 0;
+  transition: font-size 0.25s ease;
 }
 
 .navbar-brand {
   color: var(--color2);
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, font-size 0.25s ease, margin-left 0.25s ease;
 }
 
 .navbar-brand:visited {
@@ -362,6 +377,12 @@ ul {
   max-width: 1000px;
 }
 
+.contact-card,
+.tech-stack-card,
+.project-gallery-card {
+  transition: width 0.25s ease;
+}
+
 .project-list-item {
   animation: fadeSlideUp 0.45s ease both;
 }
@@ -424,6 +445,7 @@ ul {
   object-fit: contain;
   background-color: #ffffff;
   padding: 0.35rem;
+  transition: max-height 0.25s ease, padding 0.25s ease;
 }
 
 .text-muted-status {
@@ -591,14 +613,6 @@ ul {
     font-size: 3rem;
     animation: slide-right 2s ease-in-out;
   } */
-  .navbar-brand {
-    font-size: 1.5rem;
-  }
-
-  .navbar-brand p {
-    font-size: 1rem;
-  }
-
   .h2 {
     font-size: 1.8rem;
     padding-top: 5px;
@@ -615,6 +629,7 @@ ul {
   }
 
   .intro-card {
+    width: min(100%, var(--home-media-width));
     padding-bottom: 0px;
     margin-bottom: 0px;
   }
@@ -625,15 +640,38 @@ ul {
   }
 
   .photos {
-    max-width: 400px;
+    --home-media-width: clamp(240px, 82vw, 400px);
+    max-width: var(--home-media-width);
     margin: 0 auto;
     padding-top: 0 !important;
+  }
+
+  .home-media {
+    max-width: var(--home-media-width);
   }
 
   .img {
     width: 100%;
     display: block;
     text-align: center;
+  }
+
+  .home-page-row > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-page-row .intro-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-page-row .d-flex.text-center.justify-content-around.align-items-center {
+    justify-content: center !important;
+    flex-wrap: wrap;
+    gap: 0.75rem;
   }
 
   .card-body {
@@ -697,13 +735,9 @@ ul {
     transform: translateY(-50%);
   }
 
-  .navbar-brand {
-    font-size: 1.4rem;
-    margin-left: 0.5rem;
-  }
-
-  .navbar-brand p {
-    font-size: 1rem;
+  .home-page-layout {
+    padding-top: 58px;
+    padding-bottom: 68px;
   }
 }
 
@@ -715,13 +749,9 @@ ul {
     transform: translateY(-50%);
   }
 
-  .navbar-brand {
-    font-size: 1.3rem;
-    margin-left: 0.5rem;
-  }
-
-  .navbar-brand p {
-    font-size: 0.6rem;
+  .home-page-layout {
+    padding-top: 54px;
+    padding-bottom: 64px;
   }
 }
 
@@ -733,16 +763,23 @@ ul {
     transform: translateY(-50%);
   }
 
+  .navbar-toggler-icon {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 385px) {
   .navbar-brand {
-    font-size: 1.2rem;
-    margin-left: 0.5rem;
+    max-width: calc(100% - 72px);
+    padding-right: 0.25rem;
   }
 
   .navbar-brand p {
-    font-size: 0.6rem;
+    font-size: clamp(0.58rem, 3vw, 0.7rem);
+    line-height: 1.2;
   }
 
-  .navbar-toggler-icon {
-    position: relative;
+  button.navbar-toggler {
+    margin-right: 0.5rem;
   }
 }

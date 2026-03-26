@@ -60,8 +60,7 @@ const Home = () => (
         <video
           src="video-design.mp4"
           alt="Alex's pictures"
-          style={{ maxWidth: '350px' }}
-          className="img img-fluid image-style animation-flipInY border-3 rounded-5 d-block img-thumbnail mx-auto shadow-lg"
+          className="img img-fluid home-media image-style animation-flipInY border-3 rounded-5 d-block img-thumbnail mx-auto shadow-lg"
           controls
           autoPlay
           loop
