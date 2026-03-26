@@ -59,6 +59,16 @@ function NavTabs(props) {
               </li>
               <li className="nav-item">
                 <a
+                  href="#techstack"
+                  onClick={(event) => handleNavClick(event, 'Tech Stack', 'techstack')}
+                  className={`nav-link ${props.currentPage === 'Tech Stack' ? 'active' : ''}`}
+                  data-bs-dismiss="offcanvas"
+                >
+                  Tech Stack
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
                   href="#contact"
                   onClick={(event) => handleNavClick(event, 'Contact', 'contact')}
                   className={`nav-link ${props.currentPage === 'Contact' ? 'active' : ''}`}

@@ -224,14 +224,28 @@ button.navbar-toggler:active {
 
 /* Contact */
 .custom-modal {
-  background-color: var(--color1);
+  background-color: #f8fbff;
   color: var(--color1);
   position: fixed;
-  top: 60%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 80%;
-  padding: 20px;
+  width: min(92vw, 680px);
+  border: 1px solid rgba(10, 186, 181, 0.25);
+  padding: 22px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.custom-overlay {
+  background: rgba(0, 0, 77, 0.45);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  inset: 0;
+  z-index: 1040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn {
@@ -242,6 +256,97 @@ button.navbar-toggler:active {
 .btn:hover {
   background-color: var(--color3);
   color: var(--color2);
+}
+
+/* Contact page */
+.contact-card {
+  max-width: 900px;
+}
+
+.contact-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fff;
+  border: 1px solid rgba(10, 186, 181, 0.18);
+  border-radius: 14px;
+  padding: 0.8rem 0.95rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 77, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeSlideUp 0.45s ease both;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 77, 0.12);
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+}
+
+.contact-btn {
+  min-width: 240px;
+}
+
+.contact-modal-form {
+  border: 1px solid rgba(10, 186, 181, 0.2);
+}
+
+.contact-modal-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color1);
+}
+
+.contact-modal-close {
+  background-color: #ffffff;
+  color: var(--color1);
+  border: 1px solid rgba(0, 0, 77, 0.18);
+}
+
+.contact-modal-close:hover {
+  background-color: var(--color3);
+  color: var(--color2);
+}
+
+.contact-modal-form label {
+  font-weight: 600;
+  color: var(--color1);
+}
+
+.contact-modal-form .form-control {
+  border: 1px solid rgba(0, 0, 77, 0.18);
+  border-radius: 12px;
+  padding: 0.65rem 0.9rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-modal-form .form-control:focus {
+  border-color: var(--color3);
+  box-shadow: 0 0 0 0.22rem rgba(10, 186, 181, 0.2);
+  background-color: #ffffff;
+}
+
+.contact-submit-message {
+  color: var(--color1);
+  font-weight: 600;
+  text-align: center;
+  background: rgba(10, 186, 181, 0.12);
+  border: 1px solid rgba(10, 186, 181, 0.35);
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
 }
 
 /* Project Gallery */
@@ -279,6 +384,85 @@ ul {
 
 .card-link:active {
   color: var(--color1);
+}
+
+/* Tech Stack */
+.tech-stack-card {
+  max-width: 900px;
+}
+
+.tech-stack-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+}
+
+.tech-stack-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #fff;
+  border: 1px solid rgba(10, 186, 181, 0.18);
+  border-radius: 14px;
+  padding: 0.8rem 0.95rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 77, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeSlideUp 0.45s ease both;
+}
+
+.tech-stack-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 77, 0.12);
+}
+
+.tech-stack-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+}
+
+.contact-grid li:nth-child(1),
+.tech-stack-grid li:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.contact-grid li:nth-child(2),
+.tech-stack-grid li:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.contact-grid li:nth-child(3),
+.tech-stack-grid li:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+.contact-grid li:nth-child(4),
+.tech-stack-grid li:nth-child(4) {
+  animation-delay: 0.26s;
+}
+
+.contact-grid li:nth-child(5),
+.tech-stack-grid li:nth-child(5) {
+  animation-delay: 0.33s;
+}
+
+.contact-grid li:nth-child(6),
+.tech-stack-grid li:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Footer */
@@ -377,6 +561,29 @@ ul {
 
   .card-link:active {
     color: var(--color1);
+  }
+
+  .contact-card,
+  .tech-stack-card {
+    width: 100%;
+  }
+
+  .contact-grid,
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .custom-modal {
+    width: min(94vw, 640px);
+    top: 50%;
+    padding: 16px;
+    max-height: 88vh;
   }
 }
 

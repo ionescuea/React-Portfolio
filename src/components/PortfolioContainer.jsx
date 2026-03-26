@@ -4,12 +4,14 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import ProjectGallery from './pages/ProjectGallery';
+import TechStack from './pages/TechStack';
 
 const hashToPage = {
   home: 'Home',
   about: 'About',
   contact: 'Contact',
   projectgallery: 'Project Gallery',
+  techstack: 'Tech Stack',
 };
 
 const getPageFromHash = () => {
@@ -45,6 +47,8 @@ function PortfolioContainer() {
     pageContent = <Contact />;
   } else if (currentPage === 'Project Gallery') {
     pageContent = <ProjectGallery />;
+  } else if (currentPage === 'Tech Stack') {
+    pageContent = <TechStack />;
   }
 
   return (
