@@ -3,26 +3,24 @@ import { Icon } from '@iconify/react';
 
 
 const Home = () => (
-  <div className="container-fluid mt-0 pt-0 pb-3 mb-3">
+  <div className="container-fluid home-page-layout">
     {/* <div className="row">
       <div className="col-lg-12 text-center">
         <h1 className="greetings row align-items-center justify-content-center pt-md-10 pb-md-10 mb-md-10 w-100">I build responsive, user-friendly web applications using React, JavaScript, HTML, and CSS.
         <br></br>With a background in business support and administration, I bring strong organisational skills, attention to detail, and a problem-solving mindset into every project.</h1>
       </div>
     </div> */}
-    <div className="row">
-      <div className="col-lg-7 col-sm-12 d-flex flex-column justify-content-center align-items-center pt-2 mt-2">
-        <div className="h2 text-center">
+    <div className="row home-page-row">
+      <div className="col-lg-7 col-sm-12 d-flex flex-column justify-content-center align-items-center">
+        <h1 className="page-title">
           Welcome to my portfolio!
+        </h1>
+        <div className="intro-card justify-content-center shadow-lg rounded-5 fw-semibold bg-light p-4 mb-4 content-text">
+          I build responsive, user-friendly web applications using React, JavaScript, HTML, and CSS. <br /> With a background in business support and administration, I bring strong organisational skills, attention to detail, and a problem-solving mindset into every project.
         </div>
-        <div className="intro-card justify-content-center shadow-lg rounded-5 fw-semibold bg-light p-3 mb-3">
-            I am a front-end developer with a professional background in administration, project coordination, and digital systems. My experience working in structured, fast-paced environments has helped me develop strong organisational and communication skills, which I now apply to building efficient and user-focused web applications.
-            <br /><br />I have hands-on experience developing applications using React, JavaScript, HTML, and CSS, as well as working with APIs, WordPress, and website deployment.
-            <br /><br />I enjoy solving problems, improving user experience, and continuously learning new technologies. I am currently seeking opportunities where I can contribute to real-world projects while continuing to grow as a developer.
-        </div>
-        <div className="h3 text-center py-2">
-          Frontend Technologies used
-        </div>
+        <h2 className="section-title py-2">
+          Frontend Technologies
+        </h2>
         <div className="intro-card justify-content-center shadow-lg rounded-5 fw-semibold bg-light p-3 mb-4">
           <div className="d-flex text-center justify-content-around align-items-center pt-2 pb-2">
             <div>

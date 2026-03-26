@@ -22,7 +22,7 @@ function NavTabs(props) {
         </button>
         <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">AI ionescuEA</h5>
+          <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Alexandra Ionescu</h5>
             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div className="offcanvas-body">
@@ -35,6 +35,16 @@ function NavTabs(props) {
                   data-bs-dismiss="offcanvas"
                 >
                   Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  href="#about"
+                  onClick={(event) => handleNavClick(event, 'About', 'about')}
+                  className={`nav-link ${props.currentPage === 'About' ? 'active' : ''}`}
+                  data-bs-dismiss="offcanvas"
+                >
+                  About
                 </a>
               </li>
               <li className="nav-item">

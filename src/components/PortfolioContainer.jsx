@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import NavTabs from './NavTabs';
 import Home from './pages/Home';
+import About from './pages/About';
 import Contact from './pages/Contact';
 import ProjectGallery from './pages/ProjectGallery';
 
 const hashToPage = {
   home: 'Home',
+  about: 'About',
   contact: 'Contact',
   projectgallery: 'Project Gallery',
 };
@@ -37,6 +39,8 @@ function PortfolioContainer() {
   let pageContent;
   if (currentPage === 'Home') {
     pageContent = <Home />;
+  } else if (currentPage === 'About') {
+    pageContent = <About />;
   } else if (currentPage === 'Contact') {
     pageContent = <Contact />;
   } else if (currentPage === 'Project Gallery') {

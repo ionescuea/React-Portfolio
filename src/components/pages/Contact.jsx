@@ -13,10 +13,10 @@ function ContactFormModal() {
     <div className="container-fluid d-flex flex-column justify-content-center align-items-center" style={{ height: '80vh', paddingBottom: '10vh' }}>
       <div className="row justify-content-center">
         <div className="col-lg-12 col-sm-12">
-          <div className="h1 text-center" style= {{ fontFamily: 'Brush Script MT, cursive', fontSize: '4rem', fontWeight: 'bold', paddingBottom: '20px'}}>
+          <h1 className="page-title">
             Get in touch
-          </div>
-          <div className="intro-modal-card shadow-lg rounded-5 fw-bold bg-light text-center my-5 py-3 px-5" style={{ marginTop: '40px' }}>
+          </h1>
+          <div className="intro-modal-card shadow-lg rounded-5 fw-bold bg-light text-center my-5 py-3 px-5 page-subtitle" style={{ marginTop: '40px' }}>
             What&apos;s holding you back? Send me a message!
             <div className="d-flex justify-content-center align-items-center py-3">
               <button className="btn btn-primary col-sm-12 col-lg-6 mt-3" onClick={() => setModalIsOpen(true)}>Open Contact Form</button>

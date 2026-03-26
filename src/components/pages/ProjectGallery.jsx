@@ -4,14 +4,14 @@ import ProjectItem from '../ProjectItem';
 const ProjectGallery = () => (
   <div className="mb-5">
     <div className="container text-center mt-5">
-      <h2 className="pb-2" style={{ fontFamily: 'Brush Script MT, cursive', fontSize: '3.5rem', fontWeight: 'bold', paddingBottom: '20px' }}>Successful Projects I&apos;m Proud Of</h2>
-      <p>No better way to get experience than real-life projects</p>
+      <h1 className="page-title">Projects I&apos;m Proud Of</h1>
+      <p className="page-subtitle">No better way to get experience than real-life projects</p>
     </div>
     <div className="container py-2">
       <hr></hr>
       <ul className="projects-list d-flex justify-content-around align-items-center flex-wrap p-0">
         <li>
-          <ProjectItem title="Comming Soon" status="work-in-progress" image_url="coming-soon.jpg" />
+          <ProjectItem title="Coming Soon" status="work-in-progress" image_url="coming-soon.jpg" />
           <ProjectItem title="Charts App" image_url="charts-app.jpg" project_url="https://another-charts-app.netlify.app/" github_url="https://github.com/ionescuea/Charts-App" tech="React, Recharts, Node.js, API's" description="A React application that uses recharts to display data from third-party API. The data is fetched from a third-party API and displayed in a user-friendly way. " />
           <ProjectItem title="Task Tracker" image_url="task-tracker.jpg" project_url="https://github.com/ionescuea/Task-Tracker" github_url="https://github.com/ionescuea/Task-Tracker" tech="React, Node.js, Express, MongoDB, Axios, Bootstrap" description="A full-stack task management application built with React and Node.js + Express. Users can create, view, update, and delete tasks, with data persisted on the backend." />
           <ProjectItem title="Chat App" image_url="chat-app.jpg" project_url="https://anotherchatapp.netlify.app/" github_url="https://github.com/ionescuea/ChatApp-React" tech="React, Websockets, Node.js, Figma, Canva, Render, Netlify" description="A chat application with role based permissions that allows users to login and chat with other users" />
