@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ContactFormModal() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  useEffect(() => {
+    Modal.setAppElement('#root');
+  }, []);
 
   return (
     <div className="container-fluid d-flex flex-column justify-content-center align-items-center" style={{ height: '80vh', paddingBottom: '10vh' }}>
@@ -21,7 +25,8 @@ function ContactFormModal() {
                   isOpen={modalIsOpen}
                   onRequestClose={() => setModalIsOpen(false)}
                   contentLabel="Contact Form Modal"
-                  className="custom-modal shadow-lg container-fluid col-sm-12 col-lg-6 rounded-5" tabindex="-1"
+                  className="custom-modal shadow-lg container-fluid col-sm-12 col-lg-6 rounded-5"
+                  tabIndex={-1}
                   overlayClassName="custom-overlay overlay"
                 >
                   <div className="container">

@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PropTypes from 'prop-types';
 
 function ProjectItem(props) {
   return (
@@ -29,5 +30,14 @@ function ProjectItem(props) {
     </div>
   );
 }
+
+ProjectItem.propTypes = {
+  image_url: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  tech: PropTypes.string.isRequired,
+  project_url: PropTypes.string.isRequired,
+  github_url: PropTypes.string.isRequired,
+};
 
 export default ProjectItem;
