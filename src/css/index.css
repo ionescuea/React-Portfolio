@@ -354,9 +354,83 @@ ul {
   list-style-type: none;
 }
 
+.project-gallery-page {
+  padding-bottom: 88px;
+}
+
+.project-gallery-card {
+  max-width: 1000px;
+}
+
+.project-list-item {
+  animation: fadeSlideUp 0.45s ease both;
+}
+
+.projects-list .project-list-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.projects-list .project-list-item:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.projects-list .project-list-item:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+.projects-list .project-list-item:nth-child(4) {
+  animation-delay: 0.26s;
+}
+
+.projects-list .project-list-item:nth-child(5) {
+  animation-delay: 0.33s;
+}
+
+.projects-list .project-list-item:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+.projects-list .project-list-item:nth-child(7) {
+  animation-delay: 0.47s;
+}
+
+.projects-list .project-list-item:nth-child(8) {
+  animation-delay: 0.54s;
+}
+
+.projects-list .project-list-item:nth-child(9) {
+  animation-delay: 0.61s;
+}
+
+.projects-list .project-list-item:nth-child(10) {
+  animation-delay: 0.68s;
+}
+
+.project-item-card {
+  max-width: 1000px;
+  border: 1px solid rgba(10, 186, 181, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 77, 0.12);
+}
+
+.project-item-image {
+  width: 100%;
+  height: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 0.35rem;
+}
+
 .text-muted-status {
   color: var(--color3);
   font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .card-title {
@@ -371,6 +445,24 @@ ul {
   color: var(--color1);
   text-align: center;
   font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+}
+
+.project-description {
+  min-height: 4.8rem;
+}
+
+.project-read-more-btn {
+  background: transparent;
+  border: 0;
+  color: var(--color1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.project-read-more-btn:hover {
+  color: var(--color3);
 }
 
 .card-link {
@@ -564,7 +656,8 @@ ul {
   }
 
   .contact-card,
-  .tech-stack-card {
+  .tech-stack-card,
+  .project-gallery-card {
     width: 100%;
   }
 
@@ -584,6 +677,15 @@ ul {
     top: 50%;
     padding: 16px;
     max-height: 88vh;
+  }
+
+  .project-item-image {
+    max-height: 220px;
+    padding: 0.25rem;
+  }
+
+  .project-description {
+    min-height: 0;
   }
 }
 
