@@ -1,15 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NavTabs from './NavTabs';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import ProjectGallery from './pages/ProjectGallery';
 
+const hashToPage = {
+  home: 'Home',
+  contact: 'Contact',
+  projectgallery: 'Project Gallery',
+};
+
+const getPageFromHash = () => {
+  const normalizedHash = window.location.hash.replace('#', '').toLowerCase();
+  return hashToPage[normalizedHash] || 'Home';
+};
+
 function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState(getPageFromHash());
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentPage(getPageFromHash());
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
 
   let pageContent;
   if (currentPage === 'Home') {
