@@ -6,7 +6,7 @@ const projects = [
     title: 'Coming Soon',
     status: 'work-in-progress',
     image_url: 'coming-soon.jpg',
-    description: 'New projects are currently in development. More updates and case studies coming soon.',
+    description: 'New React projects are in progress, with upcoming case studies focused on problem, process, and measurable outcomes.',
     tech: 'React, JavaScript, UI/UX',
   },
   {
@@ -15,7 +15,7 @@ const projects = [
     project_url: 'https://another-charts-app.netlify.app/',
     github_url: 'https://github.com/ionescuea/Charts-App',
     tech: 'React, Recharts, Node.js, APIs',
-    description: 'A React application that uses Recharts to display data from third-party APIs in a user-friendly way.',
+    description: 'A React dashboard that turns third-party API data into clear, interactive charts with a user-friendly experience.',
   },
   {
     title: 'Task Tracker',
@@ -23,7 +23,7 @@ const projects = [
     project_url: 'https://github.com/ionescuea/Task-Tracker',
     github_url: 'https://github.com/ionescuea/Task-Tracker',
     tech: 'React, Node.js, Express, MongoDB, Axios, Bootstrap',
-    description: 'A full-stack task management application built with React and Node.js + Express. Users can create, view, update, and delete tasks, with data persisted on the backend.',
+    description: 'A full-stack task manager where users can create, track, update, and delete tasks with persistent backend storage.',
   },
   {
     title: 'Chat App',
@@ -31,7 +31,7 @@ const projects = [
     project_url: 'https://anotherchatapp.netlify.app/',
     github_url: 'https://github.com/ionescuea/ChatApp-React',
     tech: 'React, Websockets, Node.js, Figma, Canva, Render, Netlify',
-    description: 'A chat application with role-based permissions that allows users to log in and chat with others.',
+    description: 'A real-time chat application with login and role-based permissions for controlled user access.',
   },
   {
     title: 'Weather Dashboard',
@@ -39,7 +39,7 @@ const projects = [
     project_url: 'https://ionescuea.github.io/Weather-Dashboard/',
     github_url: 'https://github.com/ionescuea/Weather-Dashboard',
     tech: 'JavaScript and APIs',
-    description: 'A project that displays the weather and a five-day forecast using APIs and local storage.',
+    description: 'A weather app that shows current conditions and a five-day forecast using APIs and local storage.',
   },
   {
     title: 'Work Day Scheduler',
@@ -47,7 +47,7 @@ const projects = [
     project_url: 'https://ionescuea.github.io/Work-Day-Scheduler/',
     github_url: 'https://github.com/ionescuea/Work-Day-Scheduler',
     tech: 'JavaScript, jQuery & Daily.js',
-    description: 'A project that allows users to schedule their day by time block.',
+    description: 'A daily planner that helps users organize tasks by time block and keep schedules visible throughout the day.',
   },
   {
     title: 'Photo Music',
@@ -55,7 +55,7 @@ const projects = [
     project_url: 'https://mannyigho.github.io/photo-music/',
     github_url: 'https://github.com/mannyigho/photo-music',
     tech: 'HTML, CSS, Bootstrap, JavaScript, APIs',
-    description: 'A group project that lets users search for music while AI generates a photo for the selected song or artist.',
+    description: 'A collaborative project where users search for music while AI generates matching visuals for songs or artists.',
   },
   {
     title: 'Team Profile Generator',
@@ -63,7 +63,7 @@ const projects = [
     project_url: 'https://github.com/ionescuea/Team-Profile-Generator',
     github_url: 'https://github.com/ionescuea/Team-Profile-Generator',
     tech: 'CLI Application, ES6, Node.js, JavaScript',
-    description: 'This application will take in information about employees, then generates an HTML webpage that displays summaries for each person.',
+    description: 'A CLI tool that collects team details and generates an HTML page with structured employee summaries.',
   },
   {
     title: 'Readme Generator',
@@ -71,7 +71,7 @@ const projects = [
     project_url: 'https://github.com/ionescuea/Readme-Generator',
     github_url: 'https://github.com/ionescuea/Readme-Generator',
     tech: 'CLI Application, JavaScript, ES6, Node.js',
-    description: 'A project that generates a README using multiple-choice prompts.',
+    description: 'A CLI utility that generates a complete README from guided multiple-choice prompts.',
   },
   {
     title: 'Horiseon',
@@ -79,7 +79,7 @@ const projects = [
     project_url: 'https://ionescuea.github.io/Horiseon/',
     github_url: 'https://github.com/ionescuea/Horiseon',
     tech: 'HTML, CSS',
-    description: 'My first project using HTML and CSS, showcasing Horiseon&apos;s social media presence.',
+    description: "My first HTML and CSS project, focused on improving Horiseon's landing page structure and presentation.",
   },
 ];
 

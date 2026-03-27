@@ -5,13 +5,13 @@ const Home = () => (
     <div className="row home-page-row justify-content-center">
       <div className="col-lg-8 col-12">
         <h1 className="page-title home-hero-title">
-          Front-end developer · React & responsive web
+          Front-end developer <br />building responsive React experiences
         </h1>
         <p className="page-subtitle mb-3">
-          Fast, user-friendly interfaces from design to deployment.
+          I create clean, accessible interfaces that are easy to use and ready to ship.
         </p>
         <div className="intro-card justify-content-center shadow-lg rounded-5 fw-semibold bg-light p-4 mb-3 content-text text-center">
-          I focus on clean UI, solid fundamentals, and shipping work you can explore in the project gallery.
+          With a background in digital operations and project coordination, I bring structure, clear communication, and practical problem-solving to every build.
         </div>
       </div>
       <div className="photos col-lg-4 col-12 p-0 mb-1">

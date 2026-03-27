@@ -41,10 +41,22 @@ function ProjectItem(props) {
             </p>
             {showLinks && (
               <div className="d-flex justify-content-center mt-3">
-                <a href={props.project_url} className="card-link" target="_blank" rel="noreferrer">
+                <a
+                  href={props.project_url}
+                  className="card-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit live project for ${props.title} (opens in a new tab)`}
+                >
                   Visit Project
                 </a>
-                <a href={props.github_url} className="card-link" target="_blank" rel="noreferrer">
+                <a
+                  href={props.github_url}
+                  className="card-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View GitHub repository for ${props.title} (opens in a new tab)`}
+                >
                   GitHub repo
                 </a>
               </div>
