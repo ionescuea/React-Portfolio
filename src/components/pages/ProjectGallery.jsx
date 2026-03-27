@@ -14,8 +14,8 @@ const projects = [
     image_url: 'charts-app.jpg',
     project_url: 'https://another-charts-app.netlify.app/',
     github_url: 'https://github.com/ionescuea/Charts-App',
-    tech: 'React, Recharts, Node.js, API&apos;s',
-    description: 'A React application that uses recharts to display data from third-party API. The data is fetched from a third-party API and displayed in a user-friendly way.',
+    tech: 'React, Recharts, Node.js, APIs',
+    description: 'A React application that uses Recharts to display data from third-party APIs in a user-friendly way.',
   },
   {
     title: 'Task Tracker',
@@ -31,15 +31,15 @@ const projects = [
     project_url: 'https://anotherchatapp.netlify.app/',
     github_url: 'https://github.com/ionescuea/ChatApp-React',
     tech: 'React, Websockets, Node.js, Figma, Canva, Render, Netlify',
-    description: 'A chat application with role based permissions that allows users to login and chat with other users',
+    description: 'A chat application with role-based permissions that allows users to log in and chat with others.',
   },
   {
     title: 'Weather Dashboard',
     image_url: 'weather-dashboard.jpg',
     project_url: 'https://ionescuea.github.io/Weather-Dashboard/',
     github_url: 'https://github.com/ionescuea/Weather-Dashboard',
-    tech: 'JavaScript & API&apos;s',
-    description: 'A project that displays the weather and the forecast for the next 5 days, using API&apos;s and local storage',
+    tech: 'JavaScript and APIs',
+    description: 'A project that displays the weather and a five-day forecast using APIs and local storage.',
   },
   {
     title: 'Work Day Scheduler',
@@ -47,15 +47,15 @@ const projects = [
     project_url: 'https://ionescuea.github.io/Work-Day-Scheduler/',
     github_url: 'https://github.com/ionescuea/Work-Day-Scheduler',
     tech: 'JavaScript, jQuery & Daily.js',
-    description: 'A project that allows the user to set up a day with time to be scheduled',
+    description: 'A project that allows users to schedule their day by time block.',
   },
   {
     title: 'Photo Music',
     image_url: 'photo-music.jpg',
     project_url: 'https://mannyigho.github.io/photo-music/',
     github_url: 'https://github.com/mannyigho/photo-music',
-    tech: 'HTML, CSS Bootstrap, JavaScript, API&apos;s',
-    description: 'A group project. It allows the user to search for music and the AI generates a photo for that song or artist',
+    tech: 'HTML, CSS, Bootstrap, JavaScript, APIs',
+    description: 'A group project that lets users search for music while AI generates a photo for the selected song or artist.',
   },
   {
     title: 'Team Profile Generator',
@@ -71,7 +71,7 @@ const projects = [
     project_url: 'https://github.com/ionescuea/Readme-Generator',
     github_url: 'https://github.com/ionescuea/Readme-Generator',
     tech: 'CLI Application, JavaScript, ES6, Node.js',
-    description: 'A project that generates a readme with multiple-choice questions',
+    description: 'A project that generates a README using multiple-choice prompts.',
   },
   {
     title: 'Horiseon',
@@ -79,7 +79,7 @@ const projects = [
     project_url: 'https://ionescuea.github.io/Horiseon/',
     github_url: 'https://github.com/ionescuea/Horiseon',
     tech: 'HTML, CSS',
-    description: 'First project using HTML and CSS. This project displays Horiseon&apos;s social media presence',
+    description: 'My first project using HTML and CSS, showcasing Horiseon&apos;s social media presence.',
   },
 ];
 

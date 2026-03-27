@@ -116,13 +116,35 @@ function ContactFormModal() {
                   <form className="contact-modal-form p-3 rounded bg-light shadow w-100" name="contact" method="post" onSubmit={handleSubmit}>
                     <input type="hidden" name="form-name" value="contact" />
                     <p className="contact-modal-title mb-3">Send me a message</p>
+                    <p id="contact-form-helper" className="contact-form-helper-text">
+                      All fields are required. I will only use your email to reply to this message.
+                    </p>
                     <p>
                       <label htmlFor="email">Email </label>
-                      <input type="email" name="email" id="email" required className="form-control" placeholder="Your email" />
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        className="form-control"
+                        placeholder="Your email"
+                        aria-describedby="contact-form-helper email-helper"
+                        autoComplete="email"
+                      />
+                      <small id="email-helper" className="contact-field-helper-text">Use an email address where you want to receive a response.</small>
                     </p>
                     <p>
                       <label htmlFor="message">Message </label>
-                      <textarea name="message" id="message" required className="form-control mt-2" rows="5" placeholder="Your message"></textarea>
+                      <textarea
+                        name="message"
+                        id="message"
+                        required
+                        className="form-control mt-2"
+                        rows="5"
+                        placeholder="Your message"
+                        aria-describedby="contact-form-helper message-helper"
+                      ></textarea>
+                      <small id="message-helper" className="contact-field-helper-text">Share project details, timeline, and any key goals.</small>
                     </p>
                     <p>
                       <button type="submit" className="btn btn-primary mt-2" disabled={isSending}>
