@@ -8,7 +8,10 @@ import Footer from './components/pages/Footer.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div>
-      <App />
+      <a className="skip-link" href="#main-content">Skip to main content</a>
+      <main id="main-content">
+        <App />
+      </main>
       <Footer />
     </div>
   </React.StrictMode>,

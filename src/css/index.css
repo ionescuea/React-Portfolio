@@ -392,6 +392,24 @@ button.navbar-toggler:active {
   color: var(--color2);
 }
 
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 1rem;
+  z-index: 2000;
+  background: var(--color3);
+  color: var(--color2);
+  padding: 0.55rem 0.9rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
 a:focus-visible,
 button:focus-visible,
 .btn:focus-visible,
@@ -399,10 +417,11 @@ button:focus-visible,
 .navbar-brand:focus-visible,
 .nav-link:focus-visible,
 .btn-close:focus-visible,
-.project-read-more-btn:focus-visible {
+.project-read-more-btn:focus-visible,
+.skip-link:focus-visible {
   outline: 3px solid var(--color3);
   outline-offset: 3px;
-  box-shadow: 0 0 0 0.2rem rgba(10, 186, 181, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 77, 0.25);
 }
 
 /* Contact page */

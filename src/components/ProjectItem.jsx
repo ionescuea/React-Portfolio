@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import PropTypes from 'prop-types';
 
 function ProjectItem(props) {
-  const showLinks = props.project_url && props.github_url;
+  const showLinks = props.demo_url || props.repo_url;
   const [isExpanded, setIsExpanded] = useState(false);
   const maxPreviewLength = 120;
   const shouldTruncate = props.description.length > maxPreviewLength;
@@ -41,24 +41,28 @@ function ProjectItem(props) {
             </p>
             {showLinks && (
               <div className="d-flex justify-content-center mt-3">
-                <a
-                  href={props.project_url}
-                  className="card-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Visit live project for ${props.title} (opens in a new tab)`}
-                >
-                  Visit Project
-                </a>
-                <a
-                  href={props.github_url}
-                  className="card-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`View GitHub repository for ${props.title} (opens in a new tab)`}
-                >
-                  GitHub repo
-                </a>
+                {props.demo_url && (
+                  <a
+                    href={props.demo_url}
+                    className="card-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit live demo for ${props.title} (opens in a new tab)`}
+                  >
+                    Live Demo
+                  </a>
+                )}
+                {props.repo_url && (
+                  <a
+                    href={props.repo_url}
+                    className="card-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View GitHub repository for ${props.title} (opens in a new tab)`}
+                  >
+                    GitHub Repo
+                  </a>
+                )}
               </div>
             )}
           </div>
@@ -73,8 +77,8 @@ ProjectItem.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   tech: PropTypes.string.isRequired,
-  project_url: PropTypes.string,
-  github_url: PropTypes.string,
+  demo_url: PropTypes.string,
+  repo_url: PropTypes.string,
   status: PropTypes.string,
 };
 
