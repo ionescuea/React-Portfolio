@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home = () => (
-  <div className="container-fluid home-page-layout">
+  <div id="home" className="container-fluid home-page-layout page-section-anchor">
     <div className="row home-page-row justify-content-center">
       <div className="col-lg-8 col-12">
         <h1 className="page-title home-hero-title">

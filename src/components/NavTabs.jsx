@@ -9,8 +9,16 @@ function NavTabs(props) {
 
   const handleNavClick = (event, page, hash) => {
     event.preventDefault();
-    window.location.hash = hash;
+    if (props.currentPage === page) {
+      const el = document.getElementById(hash);
+      if (el) {
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        el.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
+      }
+      return;
+    }
     handlePageChange(page);
+    window.history.pushState(null, '', `#${hash}`);
   };
 
   return (

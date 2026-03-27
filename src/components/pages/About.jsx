@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const About = () => (
-  <div className="container py-5 mt-3">
+  <div id="about" className="container py-5 mt-3 page-section-anchor">
     <div className="row justify-content-center">
       <div className="col-lg-8 col-sm-12">
         <h1 className="page-title">

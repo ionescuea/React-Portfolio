@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import NavTabs from './NavTabs';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -14,27 +14,58 @@ const hashToPage = {
   techstack: 'Tech Stack',
 };
 
+const pageToHash = {
+  Home: 'home',
+  About: 'about',
+  Contact: 'contact',
+  'Project Gallery': 'projectgallery',
+  'Tech Stack': 'techstack',
+};
+
 const getPageFromHash = () => {
   const normalizedHash = window.location.hash.replace('#', '').toLowerCase();
   return hashToPage[normalizedHash] || 'Home';
 };
 
+function scrollToPageAnchor(page) {
+  const id = pageToHash[page];
+  if (!id) return;
+  const el = document.getElementById(id);
+  if (!el) return;
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  el.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
+}
+
 function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState(getPageFromHash());
+  const [currentPage, setCurrentPage] = useState(getPageFromHash);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
+  useLayoutEffect(() => {
+    let cancelled = false;
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (!cancelled) scrollToPageAnchor(currentPage);
+      });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [currentPage]);
+
   useEffect(() => {
-    const handleHashChange = () => {
+    const syncFromHash = () => {
       setCurrentPage(getPageFromHash());
     };
 
-    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('hashchange', syncFromHash);
+    window.addEventListener('popstate', syncFromHash);
 
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('hashchange', syncFromHash);
+      window.removeEventListener('popstate', syncFromHash);
     };
   }, []);
 

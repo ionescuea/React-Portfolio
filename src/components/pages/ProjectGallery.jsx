@@ -84,7 +84,7 @@ const projects = [
 ];
 
 const ProjectGallery = () => (
-  <div className="container py-5 mt-3 project-gallery-page">
+  <div id="projectgallery" className="container py-5 mt-3 project-gallery-page page-section-anchor">
     <div className="text-center">
       <h1 className="page-title">Projects I&apos;m Proud Of</h1>
       <p className="page-subtitle">No better way to get experience than real-life projects</p>

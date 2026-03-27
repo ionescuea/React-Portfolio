@@ -17,6 +17,11 @@ body {
   overflow-x: hidden;
 }
 
+/* Hash targets: offset for fixed navbar; pairs with JS scrollIntoView after route swap */
+.page-section-anchor {
+  scroll-margin-top: 5.5rem;
+}
+
 /* Global */
 h1,
 h2,
@@ -752,11 +757,13 @@ ul {
     height: 100%;
     object-fit: contain;
     align-self: center;
-    ;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .page-section-anchor {
+    scroll-margin-top: 6.25rem;
+  }
 
   /* .greetings {
     font-size: 3rem;
@@ -885,6 +892,10 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
+  .page-section-anchor {
+    scroll-margin-top: 6rem;
+  }
+
   .navbar-toggler {
     position: absolute;
     right: 0;
@@ -899,6 +910,10 @@ ul {
 }
 
 @media screen and (max-width: 480px) {
+  .page-section-anchor {
+    scroll-margin-top: 5.75rem;
+  }
+
   .navbar-toggler {
     position: absolute;
     right: 0;
