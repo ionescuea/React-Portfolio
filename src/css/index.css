@@ -903,6 +903,11 @@ ul {
     transform: translateY(-50%);
   }
 
+  /* Keep vertical centering while :active; base rule replaces transform with scale only */
+  button.navbar-toggler:active {
+    transform: translateY(-50%) scale(0.98);
+  }
+
   .home-page-layout {
     padding-top: 58px;
     padding-bottom: 68px;
@@ -921,6 +926,10 @@ ul {
     transform: translateY(-50%);
   }
 
+  button.navbar-toggler:active {
+    transform: translateY(-50%) scale(0.98);
+  }
+
   .home-page-layout {
     padding-top: 54px;
     padding-bottom: 64px;
@@ -933,6 +942,10 @@ ul {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  button.navbar-toggler:active {
+    transform: translateY(-50%) scale(0.98);
   }
 
   .navbar-toggler-icon {
