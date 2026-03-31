@@ -806,6 +806,10 @@ ul {
     display: none;
   }
 
+  .footer-social-label {
+    display: none;
+  }
+
   .intro-card {
     width: min(100%, var(--home-media-width));
     padding-bottom: 0px;
