@@ -5,7 +5,7 @@ const Home = () => (
     <div className="row home-page-row justify-content-center">
       <div className="col-lg-8 col-12">
         <h1 className="page-title home-hero-title">
-          Front-end developer <br />building responsive React experiences
+          Building responsive React experiences
         </h1>
         <p className="page-subtitle mb-3">
           I create clean, accessible interfaces that are easy to use and ready to ship.

@@ -1,14 +1,8 @@
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProjectItem from '../ProjectItem';
 
 const projects = [
-  {
-    title: 'Coming Soon',
-    status: 'work-in-progress',
-    image_url: 'coming-soon.jpg',
-    description: 'New React projects are in progress, with upcoming case studies focused on problem, process, and measurable outcomes.',
-    tech: 'React, JavaScript, UI/UX',
-  },
   {
     title: 'Charts App',
     image_url: 'charts-app.jpg',
@@ -80,22 +74,43 @@ const projects = [
   },
 ];
 
-const ProjectGallery = () => (
-  <div id="projectgallery" className="container py-5 mt-3 project-gallery-page page-section-anchor">
-    <div className="text-center">
-      <h1 className="page-title">Projects I&apos;m Proud Of</h1>
-      <p className="page-subtitle">No better way to get experience than real-life projects</p>
+const FEATURED_PROJECTS_COUNT = 4;
+
+const ProjectGallery = () => {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const visibleProjects = showAllProjects ? projects : projects.slice(0, FEATURED_PROJECTS_COUNT);
+  const hasMoreProjects = projects.length > FEATURED_PROJECTS_COUNT;
+
+  return (
+    <div id="projectgallery" className="container py-5 mt-3 project-gallery-page page-section-anchor">
+      <div className="text-center">
+        <h1 className="page-title">Projects I&apos;m Proud Of</h1>
+        <p className="page-subtitle">No better way to get experience than real-life projects</p>
+      </div>
+      <div className="intro-card project-gallery-card shadow-lg rounded-5 fw-semibold bg-light p-4">
+        <ul className="projects-list p-0 m-0">
+          {visibleProjects.map((project, index) => (
+            <li key={project.title} className="project-list-item">
+              <ProjectItem {...project} revealIndex={index} />
+            </li>
+          ))}
+        </ul>
+        {hasMoreProjects && (
+          <div className="d-flex justify-content-center mt-2">
+            <button
+              type="button"
+              className="project-gallery-toggle-btn"
+              onClick={() => setShowAllProjects((current) => !current)}
+              aria-expanded={showAllProjects}
+              aria-controls="projectgallery"
+            >
+              {showAllProjects ? 'Show fewer projects' : 'View more projects'}
+            </button>
+          </div>
+        )}
+      </div>
     </div>
-    <div className="intro-card project-gallery-card shadow-lg rounded-5 fw-semibold bg-light p-4">
-      <ul className="projects-list p-0 m-0">
-        {projects.map((project) => (
-          <li key={project.title} className="project-list-item">
-            <ProjectItem {...project} />
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-);
+  );
+};
 
 export default ProjectGallery;

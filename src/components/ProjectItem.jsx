@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PropTypes from 'prop-types';
 
 function ProjectItem(props) {
   const showLinks = props.demo_url || props.repo_url;
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef(null);
   const maxPreviewLength = 120;
   const shouldTruncate = props.description.length > maxPreviewLength;
   const previewDescription = shouldTruncate
@@ -12,8 +14,39 @@ function ProjectItem(props) {
     : props.description;
   const visibleDescription = isExpanded ? props.description : previewDescription;
 
+  useEffect(() => {
+    const cardElement = cardRef.current;
+    if (!cardElement) {
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.18,
+        rootMargin: '0px 0px -8% 0px',
+      },
+    );
+
+    observer.observe(cardElement);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="card project-item-card mb-4 shadow-lg border-1 rounded-5 fw-semibold bg-light p-2 m-1 mx-auto">
+    <div
+      ref={cardRef}
+      className={`card project-item-card project-reveal-item ${isVisible ? 'is-visible' : ''} mb-4 shadow-lg border-1 rounded-5 fw-semibold bg-light p-2 m-1 mx-auto`}
+      style={{ '--reveal-delay': `${Math.min(props.revealIndex * 55, 260)}ms` }}
+    >
       <div className="row g-0">
         <div className="col-md-4">
           <img src={props.image_url} className="img-fluid rounded project-item-image" alt={props.title} />
@@ -80,6 +113,7 @@ ProjectItem.propTypes = {
   demo_url: PropTypes.string,
   repo_url: PropTypes.string,
   status: PropTypes.string,
+  revealIndex: PropTypes.number,
 };
 
 export default ProjectItem;
