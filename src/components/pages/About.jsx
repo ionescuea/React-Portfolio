@@ -9,13 +9,13 @@ const About = () => (
         </h1>
         <div className="intro-card shadow-lg rounded-5 fw-semibold bg-light p-4">
           <p className="content-text">
-            I am a front-end developer with a professional background in administration, project coordination, and digital systems. My experience working in structured, fast-paced environments has helped me develop strong organisational and communication skills, which I now apply to building efficient and user-focused web applications.
+            I am a front-end developer with a strong background in administration and project coordination, bringing proven organisation, communication, and problem-solving skills into digital product work. I build responsive, user-focused applications using React, JavaScript, HTML, and CSS, with additional experience in WordPress setup and website deployment.
           </p>
           <p className="content-text">
-            I have hands-on experience developing applications using React, JavaScript, HTML, and CSS, as well as working with APIs, WordPress, and website deployment.
+            My projects include a React chat application with role-based access control, a dynamic workday scheduler, and an API-driven weather dashboard. I am confident working across both technical tasks and structured delivery, and I am focused on contributing to high-quality front-end projects in a collaborative team.
           </p>
           <p className="content-text mb-0">
-            I enjoy solving problems, improving user experience, and continuously learning new technologies. I am currently seeking opportunities where I can contribute to real-world projects while continuing to grow as a developer.
+            I am currently open to junior front-end opportunities and freelance projects.
           </p>
         </div>
       </div>

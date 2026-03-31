@@ -7,7 +7,7 @@ const Home = () => (
         <h1 className="page-title home-hero-title">
           Building responsive React experiences
         </h1>
-        <p className="page-subtitle mb-3">
+        <p className="page-subtitle mb-5">
           I create clean, accessible interfaces that are easy to use and ready to ship.
         </p>
         <div className="intro-card justify-content-center shadow-lg rounded-5 fw-semibold bg-light p-4 mb-3 content-text text-center">
