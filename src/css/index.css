@@ -587,6 +587,7 @@ ul {
 /* 3D flip — height auto until gallery measures fronts; then uniform --project-flip-card-h */
 .project-flip-root {
   perspective: 1200px;
+  -webkit-perspective: 1200px;
 }
 
 .projects-list-uniform-ready .project-flip-root {
@@ -606,6 +607,7 @@ ul {
   display: grid;
   grid-template-rows: 1fr;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
@@ -630,6 +632,9 @@ ul {
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  /* Slight Z offset helps WebKit composite front/back correctly (reduces ghosting on iOS) */
+  transform: translateZ(1px);
 }
 
 .project-flip-front::-webkit-scrollbar {
@@ -639,7 +644,7 @@ ul {
 }
 
 .project-flip-back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(1px);
 }
 
 /* Collapsed: back out of flow so row height = front only (measurement + layout) */
@@ -661,6 +666,7 @@ ul {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .project-description-full {
@@ -750,35 +756,6 @@ ul {
 
   .project-flip-front > .row {
     flex-direction: column;
-  }
-
-  /*
-   * iOS Safari: preserve-3d + rotateY + backface-visibility often composites wrong
-   * while scrolling (mirrored/ghost layers). Use a flat show/hide instead of 3D flip.
-   */
-  .project-flip-root {
-    perspective: none;
-  }
-
-  .project-flip-inner {
-    transform-style: flat;
-    transition: none;
-  }
-
-  .project-flip-inner.is-flipped {
-    transform: none;
-  }
-
-  .project-flip-back {
-    transform: none;
-  }
-
-  .project-flip-inner:not(.is-flipped) .project-flip-back {
-    display: none;
-  }
-
-  .project-flip-inner.is-flipped .project-flip-front {
-    display: none;
   }
 }
 
