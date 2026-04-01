@@ -27,14 +27,14 @@ function NavTabs(props) {
         <a className="navbar-brand" href="#home" onClick={(event) => handleNavClick(event, 'Home', 'home')}>Alexandra Ionescu <br />
           <p className="title">Front-end Developer | Digital and Technical Support</p></a>
         <div className="header-social-links d-none d-lg-flex" aria-label="Quick links">
-          <span className="header-social-label">Quick links</span>
+          {/* <span className="header-social-label">Quick links</span> */}
           <a
             href="#projectgallery"
             className="header-social-btn"
             onClick={(event) => handleNavClick(event, 'Project Gallery', 'projectgallery')}
             aria-label="Visit project gallery"
           >
-            Visit Projects
+            View Projects
           </a>
           <a
             href="#contact"
@@ -42,7 +42,7 @@ function NavTabs(props) {
             onClick={(event) => handleNavClick(event, 'Contact', 'contact')}
             aria-label="Go to contact page"
           >
-            Contact
+            Contact Me
           </a>
         </div>
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">

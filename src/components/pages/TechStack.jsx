@@ -1,14 +1,35 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Icon } from '@iconify/react';
 
-const technologies = [
-  { name: 'React', icon: 'logos:react' },
-  { name: 'JavaScript (ES6+)', icon: 'logos:javascript' },
-  { name: 'HTML5 & CSS3', icon: 'logos:html-5' },
-  { name: 'REST APIs', icon: 'mdi:api' },
-  { name: 'Git & GitHub', icon: 'logos:github-icon' },
-  { name: 'WordPress', icon: 'logos:wordpress-icon' },
-  { name: 'Netlify & Hosting', icon: 'logos:netlify-icon' },
+const skillGroups = [
+  {
+    title: 'Frontend',
+    items: [
+      { name: 'React', icon: 'logos:react' },
+      { name: 'JavaScript (ES6+)', icon: 'logos:javascript' },
+      { name: 'HTML5 / CSS3', icon: 'logos:html-5' },
+    ],
+  },
+  {
+    title: 'Backend',
+    items: [
+      { name: 'Node.js', icon: 'logos:nodejs-icon' },
+      { name: 'Express', icon: 'simple-icons:express' },
+    ],
+  },
+  {
+    title: 'Database',
+    items: [{ name: 'MongoDB', icon: 'logos:mongodb-icon' }],
+  },
+  {
+    title: 'Tools',
+    items: [
+      { name: 'Git & GitHub', icon: 'logos:github-icon' },
+      { name: 'WordPress', icon: 'logos:wordpress-icon' },
+      { name: 'Netlify & Hosting', icon: 'logos:netlify-icon' },
+      { name: 'REST APIs', icon: 'mdi:api' },
+    ],
+  },
 ];
 
 const TechStack = () => (
@@ -19,17 +40,23 @@ const TechStack = () => (
           Tech Stack
         </h1>
         <div className="intro-card tech-stack-card shadow-lg rounded-5 fw-semibold bg-light p-4">
-          <p className="page-subtitle mb-3">Technologies I Use</p>
-          <ul className="tech-stack-grid mb-0 p-0">
-            {technologies.map((technology) => (
-              <li key={technology.name} className="tech-stack-item content-text">
-                <span className="tech-stack-icon">
-                  <Icon icon={technology.icon} width="28" height="28" />
-                </span>
-                <span>{technology.name}</span>
-              </li>
+          <div className="tech-stack-groups">
+            {skillGroups.map((group) => (
+              <section key={group.title} className="tech-stack-group">
+                <h2 className="tech-stack-group-title">{group.title}</h2>
+                <ul className="tech-stack-grid mb-0 p-0">
+                  {group.items.map((item) => (
+                    <li key={item.name} className="tech-stack-item content-text">
+                      <span className="tech-stack-icon">
+                        <Icon icon={item.icon} width="28" height="28" />
+                      </span>
+                      <span>{item.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </div>

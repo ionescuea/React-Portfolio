@@ -418,6 +418,7 @@ button:focus-visible,
 .nav-link:focus-visible,
 .btn-close:focus-visible,
 .project-read-more-btn:focus-visible,
+.project-flip-back-btn:focus-visible,
 .skip-link:focus-visible {
   outline: 3px solid var(--color3);
   outline-offset: 3px;
@@ -564,15 +565,162 @@ ul {
   transform: translateY(0) scale(1);
 }
 
+.project-item-hover-wrap {
+  max-width: 1000px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.project-item-hover-wrap:hover {
+  transform: translateY(-2px);
+}
+
 .project-item-card {
   max-width: 1000px;
   border: 1px solid rgba(10, 186, 181, 0.18);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
 }
 
-.project-item-card:hover {
-  transform: translateY(-2px);
+.project-item-hover-wrap:hover .project-item-card {
   box-shadow: 0 10px 20px rgba(0, 0, 77, 0.12);
+}
+
+/* 3D flip — height auto until gallery measures fronts; then uniform --project-flip-card-h */
+.project-flip-root {
+  perspective: 1200px;
+}
+
+.projects-list-uniform-ready .project-flip-root {
+  height: var(--project-flip-card-h);
+  max-height: var(--project-flip-card-h);
+  overflow: hidden;
+}
+
+.projects-list-uniform-ready .project-flip-root > .project-flip-inner {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+}
+
+.project-flip-inner {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.project-flip-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.project-flip-face {
+  grid-area: 1 / 1;
+  align-self: stretch;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.project-flip-front {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.project-flip-front::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.project-flip-back {
+  transform: rotateY(180deg);
+}
+
+/* Collapsed: back out of flow so row height = front only (measurement + layout) */
+.project-flip-inner:not(.is-flipped) .project-flip-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.project-flip-inner.is-flipped .project-flip-back {
+  position: static;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.project-flip-back-inner {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.project-description-full {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.project-flip-back-title {
+  text-align: center;
+}
+
+.project-back-section-title {
+  color: var(--color1);
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.project-back-body {
+  color: var(--color1);
+  text-align: left;
+  font-size: clamp(0.9rem, 1.15vw, 1rem);
+  line-height: 1.55;
+}
+
+.project-back-tech-line {
+  letter-spacing: 0.02em;
+}
+
+.project-back-feature-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--color1);
+  font-size: clamp(0.9rem, 1.15vw, 1rem);
+  line-height: 1.5;
+}
+
+.project-back-feature-list li {
+  margin-bottom: 0.35rem;
+}
+
+.project-back-feature-list li:last-child {
+  margin-bottom: 0;
+}
+
+.project-flip-back-btn {
+  background: transparent;
+  border: 0;
+  color: var(--color1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+}
+
+.project-flip-back-btn:hover {
+  color: var(--color3);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -580,6 +728,10 @@ ul {
   .project-reveal-item.is-visible {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+
+  .project-flip-inner {
     transition: none;
   }
 }
@@ -595,7 +747,7 @@ ul {
   transform: translateY(0) scale(1);
 }
 
-.project-item-card:hover .project-item-image {
+.project-item-hover-wrap:hover .project-item-image {
   transform: translateY(-1px) scale(1.02);
   filter: saturate(1.04);
 }
@@ -609,7 +761,6 @@ ul {
 
 .card-title {
   color: var(--color1);
-  font-family: 'Brush Script MT', cursive;
   font-size: clamp(1.5rem, 2.2vw, 2rem);
   font-weight: bold;
   text-align: center;
@@ -619,6 +770,12 @@ ul {
   color: var(--color1);
   text-align: center;
   font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+}
+
+/* Flip-card back: left-align copy; title + link row + Back button centered via their own rules/utilities */
+.project-flip-back-inner .card-text,
+.project-flip-back-inner .text-muted-status {
+  text-align: left;
 }
 
 .project-description {
@@ -669,6 +826,26 @@ ul {
 /* Tech Stack */
 .tech-stack-card {
   max-width: 900px;
+}
+
+.tech-stack-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tech-stack-group:last-child .tech-stack-grid {
+  margin-bottom: 0;
+}
+
+.tech-stack-group-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color1);
+  margin-bottom: 0.65rem;
+  opacity: 0.92;
 }
 
 .tech-stack-grid {

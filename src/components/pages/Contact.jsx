@@ -79,6 +79,8 @@ function ContactFormModal() {
         <div className="col-lg-8 col-sm-12">
           <h1 className="page-title">
             Get in touch
+            <p className="content-text text-center">
+              I&apos;m open to front-end opportunities and freelance projects.</p>
           </h1>
           <div className="intro-card contact-card shadow-lg rounded-5 fw-semibold bg-light p-4">
             <p className="page-subtitle mb-3">Let&apos;s build something great together</p>
