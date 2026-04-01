@@ -55,9 +55,9 @@ function ProjectItem(props) {
         setFlipped(false);
       }
     };
-    document.addEventListener('mousedown', handlePointerDown, true);
+    document.addEventListener('pointerdown', handlePointerDown, true);
     return () => {
-      document.removeEventListener('mousedown', handlePointerDown, true);
+      document.removeEventListener('pointerdown', handlePointerDown, true);
     };
   }, [isFlipped, setFlipped]);
 

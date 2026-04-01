@@ -751,6 +751,35 @@ ul {
   .project-flip-front > .row {
     flex-direction: column;
   }
+
+  /*
+   * iOS Safari: preserve-3d + rotateY + backface-visibility often composites wrong
+   * while scrolling (mirrored/ghost layers). Use a flat show/hide instead of 3D flip.
+   */
+  .project-flip-root {
+    perspective: none;
+  }
+
+  .project-flip-inner {
+    transform-style: flat;
+    transition: none;
+  }
+
+  .project-flip-inner.is-flipped {
+    transform: none;
+  }
+
+  .project-flip-back {
+    transform: none;
+  }
+
+  .project-flip-inner:not(.is-flipped) .project-flip-back {
+    display: none;
+  }
+
+  .project-flip-inner.is-flipped .project-flip-front {
+    display: none;
+  }
 }
 
 .project-item-image {
