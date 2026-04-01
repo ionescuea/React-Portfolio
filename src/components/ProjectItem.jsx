@@ -140,7 +140,7 @@ function ProjectItem(props) {
             aria-hidden={isFlipped}
           >
             <div className="row g-0 h-100">
-              <div className="col-md-4">
+              <div className="col-12 col-md-4">
                 <img
                   src={props.image_url}
                   className="img-fluid rounded project-item-image"
@@ -161,7 +161,7 @@ function ProjectItem(props) {
                   }}
                 />
               </div>
-              <div className="col-md-8 d-flex">
+              <div className="col-12 col-md-8 d-flex">
                 <div className="card-body d-flex flex-column flex-grow-1">
                   <h5 className="card-title d-flex justify-content-center">{props.title}</h5>
                   {props.status === 'work-in-progress' && (
